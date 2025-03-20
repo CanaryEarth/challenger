@@ -1,0 +1,1 @@
+This is a sub domain test. I wrote this algorithm to solve the popular newspaper puzzle, Challenger, many decades ago. I think I'm the only person on the planet to do so. Contact me if you want to use this code. It is not open source in any way.
