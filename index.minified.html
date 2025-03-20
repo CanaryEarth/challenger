@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- By Constantin Bucataru at Breathable Universe Resilient Design, March 19th, 2025. Do no copy, imbed or alter anything below this without written authorisation. Thank you. -->
+<html>
+	<head>
+		<meta name="viewport" content="width=410, initial-scale=0.8, maximum-scale=1, user-scalable=no">
+		<link rel="icon" type="image/png" href="challenger.png">
+		<style>
+			input,table{text-align:center}#edgetd,input{background:0 0}svg,table{position:absolute}body,html{margin:0;height:100%;display:flex;justify-content:center;align-items:center}#main{font-family:Arial;width:410px;height:410px;position:relative}table{font-size:18px;border-collapse:collapse;z-index:10;left:175px;top:5px}td{width:45px;height:45px}input{width:40px;font-size:20pt;font-weight:700;border:none}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.button{background-color:#ccc;border-radius:5px;box-shadow:-3px 3px 3px #000;outline:0;transition-duration:.2s}.button:focus,.button:hover{background-color:#ddd}.button:active{box-shadow:none;transform:translateY(3px)}#solveButton{width:170px;height:35px;font-size:14pt;margin:auto auto 9px}#refreshButton{width:130px;height:20px;font-size:10pt}#loader{margin:auto;border:10px solid #f3f3f3;border-top:10px solid #3498db;border-radius:50%;width:15px;height:15px;animation:2s linear infinite spin;display:none}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}svg{left:166px;top:0;z-index:-1;width:250px;height:293px}#solutions{width:100%;display:grid;grid-gap:10px;grid-template-columns:repeat(auto-fill,50px);padding:100px 0 0}.tip{width:150px;float:left;margin-top:50px}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<svg viewBox="0 0 230 270"><style><![CDATA[.B{stroke:#000}.C{fill:none}.D{stroke-width:6}.E{stroke-width:3}]]></style><path fill="#fff" d="M-1-1h232v272H-1z"/><g class="B C D"><path d="M181.4 49h43v43h-43z"/><path d="M181.4 92h43v43h-43z"/><path d="M181.4 135h43v43h-43z"/></g><g class="E B C"><path d="M95.4 48.4h43v43h-43z"/><path d="M95.4 91.4h43v43h-43z"/><path d="M95.4 134.4h43v43h-43z"/></g><path d="M95.4 220.4h43v43h-43z" class="B C D"/><g class="E B C"><path d="M52.4 48.4h43v43h-43z"/><path d="M52.4 91.4h43v43h-43z"/><path d="M52.4 134.4h43v43h-43z"/></g><path d="M52.4 220.4h43v43h-43z" class="B C D"/><g class="E B C"><path d="M9.4 48.4h43v43h-43z"/><path d="M9.4 91.4h43v43h-43z"/><path d="M9.4 134.4h43v43h-43z"/></g><path d="M9.4 220.4h43v43h-43z" class="B C D"/><g class="E B C"><path d="M138.4 48.4h43v43h-43z"/><path d="M138.4 91.4h43v43h-43z"/><path d="M138.4 134.4h43v43h-43z"/></g><g class="D B C"><path d="M181.4 220.4h43v43h-43zm0-214.4h43v43h-43z"/><path d="M181.4 178h43v43h-43z"/></g><g class="E B C"><path d="M95.4 177.4h43v43h-43z"/><path d="M52.4 177.4h43v43h-43z"/><path d="M9.4 177.4h43v43h-43zm129 0h43v43h-43z"/></g><path d="M138.4 220.4h43v43h-43z" class="B C D"/><g class="E B"><path transform="rotate(315 52.5 177.5)" d="M45.5 177.5h14" class="C"/><path transform="rotate(45 52 91.5)" d="M45 91.5h14" class="C"/><path transform="rotate(45 138.5 177.5)" d="M131.5 177.5h14" class="C"/><path transform="rotate(315 138.5 91.5)" d="M131.5 91.5h14" class="C"/><circle cy="134.5" cx="95.5" r="6.5"/></g></svg>
+			<table>
+			<tbody id="myTable">
+				<tr>
+					<td colspan="4">
+						<div id="loader" style="display: none;"></div>
+						<input id="solveButton" class="button" type="button" value="Solve Challenger" onclick="myFunction()">
+					</td>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="28"></td>
+				</tr>
+				<tr>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td><input type="number" min="1" max="9" class="grid-input" value="9"></td>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="21"></td>
+				</tr>
+			<tr>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td><input type="number" min="1" max="9" class="grid-input" value="5"></td>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="25"></td>
+				</tr>
+			<tr>
+					<td><input type="number" min="1" max="9" class="grid-input" value="4"></td>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="22"></td>
+				</tr>
+			<tr>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td><input type="number" min="1" max="9" class="grid-input" value="9"></td>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td><input type="number" min="1" max="9" class="grid-input"></td>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="29"></td>
+				</tr>
+			<tr>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="23"></td>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="24"></td>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="23"></td>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="27"></td>
+					<td id="edgetd"><input type="number" min="4" max="36" class="sum-input" value="19"></td>
+				</tr>
+			<tr>
+				<td colspan="5" style="border-style: none;"><div id="solved"></div></td>
+			</tr>
+			</tbody>
+		</table>
+			<div class="tip">
+				<b>Tip:</b><br>
+				Press TAB to cycle through squares quickly. Leave unused squares blank or zero. The UP and DOWN arrow keys increase or decrease values.<br><br>
+				<input id="refreshButton" class="button" type="button" value="New Puzzle" onclick="newPuzzle()">
+			</div>
+			<div id="solutions"></div>
+		</div>
+		<script>
+			function validateGridInput(e){let t=parseInt(e.value,10);isNaN(t)||t<1?e.value="":t>9?e.value=9:e.value=t}function validateSumInput(e){let t=parseInt(e.value,10);isNaN(t)||t<1?e.value="":t>36?e.value=36:e.value=t}document.querySelectorAll(".grid-input").forEach(e=>{e.addEventListener("input",()=>validateGridInput(e))}),document.querySelectorAll(".sum-input").forEach(e=>{e.addEventListener("input",()=>validateSumInput(e))});const inputs=document.querySelectorAll("input[type=number]");let grid=[],sgrid=[];function clearOld(){document.getElementById("solutions").innerHTML="",document.getElementById("solved").innerHTML=""}const constraints=[{cells:[2,3,4,5],total:6},{cells:[7,8,9,10],total:11},{cells:[12,13,14,15],total:16},{cells:[17,18,19,20],total:21},{cells:[2,7,12,17],total:22},{cells:[3,8,13,18],total:23},{cells:[4,9,14,19],total:24},{cells:[5,10,15,20],total:25},{cells:[5,9,13,17],total:1},{cells:[2,8,14,20],total:26}];function newPuzzle(){clearOld();let e=document.querySelectorAll("input[type=number]");e.forEach(e=>{e.value="",e.style.color="black"});let t=Array(27).fill(0);for(let l=2;l<21;l++)6!==l&&11!==l&&16!==l&&(t[l]=Math.floor(9*Math.random())+1);constraints.forEach(({cells:e,total:l})=>{t[l]=e.reduce((e,l)=>e+t[l],0)});for(var n=[0,1,2,3],i=n.length-1;i>0;i--){var r=Math.floor(Math.random()*(i+1)),s=n[i];n[i]=n[r],n[r]=s}let o=n.map((e,t)=>2+5*t+e),d=[1,6,11,16,21,22,23,24,25,26];e.forEach((e,l)=>{let n=l+1;(d.includes(n)||o.includes(n))&&(e.value=t[n])})}async function myFunction(){statusSpin(),await new Promise(e=>setTimeout(e,0)),mySolver(),statusSpin()}function statusSpin(){let e=document.getElementById("loader"),t=document.getElementById("solveButton");e.style.display="none"===e.style.display?"block":"none",t.style.display="none"===t.style.display?"block":"none"}function check(){for(let{cells:e,total:t}of constraints)if(e.reduce((e,t)=>e+sgrid[t],0)!==sgrid[t])return e[e.length-1];return!!sgrid.slice(2,21).every(e=>0!==e)||20}function checkSkip(){for(let{cells:e,total:t}of constraints)if(e.reduce((e,t)=>e+sgrid[t],0)>sgrid[t])return!0;return!1}function mySolver(){clearOld();var e,t,l,n=999,i=0;for(e=1;e<27;e++)grid[e]=parseInt(document.getElementsByTagName("input")[e].value)||0,sgrid[e]=grid[e];var r=performance.now(),s=document.createDocumentFragment();for(e=2;e<21;){if(0==grid[e]&&sgrid[e]<9){if(sgrid[e]++,!0==checkSkip())e--;else if(!0==(n=check())){if(n=20,1==++i)for(t=2;t<21;t++)0==grid[t]&&(document.getElementsByTagName("input")[t].style.color="blue",document.getElementsByTagName("input")[t].value=sgrid[t]);(l=document.createElement("DIV")).innerText=i+":\n"+sgrid[2]+"|"+sgrid[3]+"|"+sgrid[4]+"|"+sgrid[5]+"\n"+sgrid[7]+"|"+sgrid[8]+"|"+sgrid[9]+"|"+sgrid[10]+"\n"+sgrid[12]+"|"+sgrid[13]+"|"+sgrid[14]+"|"+sgrid[15]+"\n"+sgrid[17]+"|"+sgrid[18]+"|"+sgrid[19]+"|"+sgrid[20],s.appendChild(l)}}if(++e>n&&n<999){for(e=20;0!=grid[e]||9==sgrid[e]||e>n;)if(0==grid[e]&&(sgrid[e]=0),--e<2||i>999){var o=performance.now();i<1?document.getElementById("solved").innerHTML="No solutions found in "+((o-r)/1e3).toFixed(2)+"s.":i<1e3?document.getElementById("solved").innerHTML=i+" solutions found in "+((o-r)/1e3).toFixed(2)+"s.":document.getElementById("solved").innerHTML="More than 1000 solutions found in "+((o-r)/1e3).toFixed(2)+"s.",document.getElementById("solutions").appendChild(s);return}}}}
+		</script>
+	</body>
+</html>
